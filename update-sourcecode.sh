@@ -41,6 +41,6 @@ do
             echo -ne "Failed to update repository: ${REPO} due to unsaved local changes. Discard or push the changes to the remote repository to update it.\n"
         fi
     else
-        git clone $https://github.com/michaelteguhlaksana/${REPO}.git ${REPO_FOLDER};
+        git clone https://github.com/michaelteguhlaksana/${REPO}.git ${REPO_FOLDER};
     fi
 done
