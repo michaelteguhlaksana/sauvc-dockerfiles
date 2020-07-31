@@ -1,6 +1,3 @@
-FROM leonardo/sauvcmaster:latest 
-MAINTAINER Leonardo Edgar
-
 # User and permissions
 ARG user=leonardo
 ARG group=leonardo
@@ -39,3 +36,6 @@ RUN sudo sed --in-place --expression \
 # Add script to run serial node
 COPY run_serial_node.sh /run_serial_node.sh
 RUN bash -c "sudo chmod +x /run_serial_node.sh"
+
+# Build Arduino Lib
+RUN bash -c "./Arduino/libraries/build_arduino_lib.sh"
