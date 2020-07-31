@@ -27,4 +27,4 @@ services:
       - ./build_arduino_lib.sh:/home/leonardo/Arduino/libraries/build_arduino_lib.sh
     stop_signal: SIGINT
     working_dir: /home/leonardo
-    command: sleep infinity
+    command: bash -c "./Arduino/libraries/build_arduino_lib.sh && sleep infinity"
