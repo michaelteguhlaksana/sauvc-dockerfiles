@@ -1,3 +1,6 @@
+FROM leonardo/sauvcmaster:latest 
+MAINTAINER Leonardo Edgar
+
 # User and permissions
 ARG user=leonardo
 ARG group=leonardo
